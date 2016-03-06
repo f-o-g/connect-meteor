@@ -1,5 +1,5 @@
 {
-  "name": "connect-meteor",
+  "name": "meteor-connect",
   "version": "0.0.3",
   "description": "Connect container for meteor",
   "main": "./lib/index.js",

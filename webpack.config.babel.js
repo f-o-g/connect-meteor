@@ -20,7 +20,7 @@ var config = {
     ]
   },
   output: {
-    library: 'connectMeteor',
+    library: 'meteor-connect',
     libraryTarget: 'umd'
   },
   plugins: [
