@@ -1,3 +1,5 @@
 build/
 node_modules/
-webpack.babel.js
+prepublish.js
+lib
+webpack.config.babel.js

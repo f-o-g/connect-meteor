@@ -1,13 +1,15 @@
 {
   "name": "connect-meteor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Connect container for meteor",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --ext .js --ext .jsx",
-    "build": "webpack",
-    "start": "webpack-dev-server"
+    "build:lib": "babel src --out-dir lib",
+    "build:umd": "cross-env NODE_ENV=development webpack src/index.js dist/react-redux.js",
+    "build:umd:min": "cross-env NODE_ENV=production webpack src/index.js dist/react-redux.min.js",
+    "build": "npm run build:lib && npm run build:umd && npm run build:umd:min && node ./prepublish",
+    "clean": "rimraf lib dist coverage",
+    "prepublish": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
   "homepage": "https://github.com/f-o-g/connect-meteor#readme",
   "devDependencies": {
     "babel": "^6.5.2",
+    "babel-cli": "^6.6.5",
     "babel-core": "^6.6.5",
     "babel-eslint": "^5.0.0",
     "babel-loader": "^6.2.4",
@@ -36,12 +39,17 @@
     "babel-preset-stage-1": "^6.5.0",
     "babel-preset-stage-2": "^6.5.0",
     "babel-preset-stage-3": "^6.5.0",
+    "cross-env": "^1.0.7",
+    "es3ify": "^0.2.1",
     "eslint": "^2.3.0",
     "eslint-loader": "^1.3.0",
     "eslint-plugin-react": "^4.2.0",
     "estraverse-fb": "^1.3.1",
+    "fs": "0.0.2",
+    "glob": "^7.0.3",
     "html-webpack-plugin": "^2.9.0",
     "react": "^0.14.7",
+    "rimraf": "^2.5.2",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1",
     "webpack-merge": "^0.8.3"
