@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define(["react"], factory);
 	else if(typeof exports === 'object')
-		exports["connectMeteor"] = factory(require("react"));
+		exports["meteor-connect"] = factory(require("react"));
 	else
-		root["connectMeteor"] = factory(root["React"]);
+		root["meteor-connect"] = factory(root["React"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache

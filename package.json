@@ -1,6 +1,6 @@
 {
   "name": "meteor-connect",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "description": "Connect container for meteor",
   "main": "./lib/index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/f-o-g/connect-meteor.git"
+    "url": "git+https://github.com/f-o-g/meteor-connect.git"
   },
   "keywords": [
     "meteor",
@@ -23,9 +23,9 @@
   "author": "Norberto Sanchez, Alberto Centelles",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/f-o-g/connect-meteor/issues"
+    "url": "https://github.com/f-o-g/meteor-connect/issues"
   },
-  "homepage": "https://github.com/f-o-g/connect-meteor#readme",
+  "homepage": "https://github.com/f-o-g/meteor-connect#readme",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.6.5",
