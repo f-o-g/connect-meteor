@@ -1,4 +1,4 @@
-import React, { Component, createElement } from 'react'
+import React, { Component, cloneElement } from 'react'
 import shallowEqual from '../utils/shallowEqual'
 
 class PureRenderFilter extends Component {
@@ -23,9 +23,7 @@ class PureRenderFilter extends Component {
   render() {
     this.haveOwnPropsChanged = false
 
-    this.renderedElement = createElement(this.props.children,
-      this.props
-    )
+    this.renderedElement = cloneElement(this.props.children, this.props)
 
     return this.renderedElement
   }
