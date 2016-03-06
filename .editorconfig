@@ -1,0 +1,13 @@
+root = true
+# General settings for whole project
+[*]
+indent_style = tab
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true
+# Format specific overrides
+[*.md]
+trim_trailing_whitespace = false
+[app/**.js]
+indent_style = tab
+indent_size = 2
